@@ -28,6 +28,15 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+function generatePassword(){
+    var password = "";
+    for(var i = 0; i < characterLength; i++){
+        var randomIndex = Math.floor(Math.random() * choiceArray.length)
+        password = password + choiceArray[randomIndex];
+    }
+    return password;
+}
+
 
 function getPrompts(){
     choiceArray = [];
@@ -54,4 +63,3 @@ function getPrompts(){
         }
         return true;    
     }
-}
