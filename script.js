@@ -30,4 +30,21 @@ function getPrompts(){
         alert("Character length has to be a length of 8 - 128 characters. Please try again");
         return false;
     }
+        if (confirm("Lower case letters included?")){
+            choiceArray = choiceArray.concat(lowerCaseArr);
+        }
+    
+        if (confirm("Upper case letters included?")){
+            choiceArray = choiceArray.concat(upperCaseArr)
+        }
+    
+        if (confirm("Special characters included?")) {
+            choiceArray = choiceArray.concat(specialCharArr)
+        }
+    
+        if (confirm("Numbers included?")){
+            choiceArray = choiceArray.concat(numberArr)
+        }
+        return true;    
+    }
 }
