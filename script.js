@@ -20,3 +20,14 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+function getPrompts(){
+    choiceArray = [];
+
+    characterLength = parseInt(prompt("How many characters do you want?(8 - 128 characters)")); 
+    if(isNaN(characterLength) || characterLength < 8 || characterLength > 128) {
+        alert("Character length has to be a length of 8 - 128 characters. Please try again");
+        return false;
+    }
+}
